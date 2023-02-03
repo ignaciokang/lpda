@@ -1,0 +1,698 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0 auto;
+	/* background-color: #22374d; */
+	background-color: white;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+section {
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	margin: 30px;
+}
+
+h2 {
+	margin: 5px 0px 10px;
+	font-size: 28px;
+	font-family: 'Caveat';
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+abbr {
+	text-decoration: none;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.botones {
+	/* background-color: gold; */
+	background-image: linear-gradient(rgb(255, 215, 0), rgb(155, 132, 3));
+	width: 40%;
+	margin: 0 auto;
+	padding: 10px;
+	color: black;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	transition: all 500ms ease-out;
+	border: 1px solid black;
+}
+
+.gray {
+	background-image: linear-gradient(gray, gray);
+	color: white;
+}
+
+.botones:hover {
+	background-image: linear-gradient(rgb(198, 170, 13), rgb(198, 170, 13));
+	text-decoration: underline;
+}
+
+.gray:hover {
+	background-image: linear-gradient(rgb(83, 83, 83), rgb(83, 83, 83));
+	text-decoration: underline;
+}
+.italic {
+	font-style: italic;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.flexBetween {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flexCol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.active {
+	color: gold;
+}
+
+header {
+	justify-content: space-between;
+	background-color: black;
+	width: 100%;
+}
+
+header img {
+	padding: 20px;
+	height: 50px;
+	transition: all 500ms ease-out;
+}
+
+header img:hover {
+	transform: scale(1.1);
+}
+
+nav ul {
+	font-size: 20px;
+	color: white;
+}
+
+nav ul li a {
+	margin-right: 10px;
+	cursor: pointer;
+	font-weight: bold;
+	color: white;
+}
+
+iframe {
+	border: none;
+}
+nav a:hover {
+	color: gold;
+}
+
+nav a:active {
+	color: red;
+}
+
+.bloquePrincipal {
+	height: 100vh;
+	background-image: url('../img/presentacion/banda.jpeg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+
+.fraseBoton {
+	background-color: #3298a0;
+	width: 70%;
+	padding: 10px;
+	font-weight: bolder;
+	border: none;
+	border-radius: 10px;
+	font-size: 14px;
+	letter-spacing: 0.2em;
+	color: white;
+}
+
+.fraseBoton:hover {
+	background-color: #297a80;
+	cursor: pointer;
+}
+
+.franja {
+	width: 40%;
+	height: 100%;
+}
+
+.contenedorPizarron {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15%;
+	color: black;
+}
+
+/* #pizarron {
+	width: 600px;
+	height: 400px;
+	margin: 0px auto 20px;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Caveat';
+	font-size: 24px;
+	background-image: url('../img/cuaderno.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	color: black;
+	background-color: black;
+} */
+
+#pizarron {
+	width: 800px;
+	height: 500px;
+	/* margin-top: 60%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Caveat';
+	font-size: 24px;
+	background-image: url('../img/presentacion/cuaderno.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+}
+
+.frase2 {
+	visibility: hidden;
+}
+
+#pizarron:hover .frase2 {
+	visibility: visible;
+}
+#pizarron:hover .frase1 {
+	visibility: hidden;
+}
+
+.frase1,
+.frase2 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.portadas {
+	width: 33%;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.portadas img {
+	height: 100%;
+	margin: 0 auto;
+	justify-self: center;
+	transition: all 500ms ease-out;
+}
+
+.portadas > div {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(1, 1, 1, 0.6);
+	visibility: hidden;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: middle;
+}
+
+.portadas > div > p {
+	font-family: 'Caveat';
+	font-size: 28px;
+}
+
+/* Aca intenté utilizar:
+	.portadas:hover .portadas > div 
+
+	La idea era que al hacer hover sobre la clase portadas, se active la visibilidad en el div hijo directo de la clase portadas...
+	Como no funcionó tuve que crear la clase "links" 
+*/
+.portadas:hover .links {
+	visibility: visible;
+}
+
+.portadas:hover img {
+	transform: scale(1.1);
+}
+
+/* MUSICOS */
+
+#musicos {
+	background-image: url('../img/recursos/pattern.png');
+	background-repeat: repeat;
+	background-size: 400px;
+	text-align: center;
+}
+
+#musicos > p {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+#musicos strong:hover {
+	color: gold;
+}
+
+.integrantes img:hover {
+	filter: brightness(130%);
+}
+
+.integrantes-card {
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	border: 5px solid;
+	border-color: #aa653b;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.integrantes-card > div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-items: space-between;
+	background-color: rgb(0, 0, 0, 0.6);
+}
+
+.integrantes-card span {
+	font-weight: bold;
+	color: #aa653b;
+}
+
+.integrantes-card h2 {
+	background-color: #aa653b;
+}
+
+.integrantes-card:hover .instrumento {
+	visibility: visible;
+}
+
+.instrumento {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #aa653b;
+	visibility: hidden;
+}
+
+.integrantes-card img {
+	width: 350px;
+	height: 350px;
+	filter: brightness(70%);
+	transition: all 500ms ease-out;
+}
+
+/* PRESENTACION */
+
+#presentacion {
+	background-color: white;
+	color: black;
+}
+
+#presentacion > h2 {
+	margin-bottom: 0;
+}
+
+.presentacionContenido {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	gap: 5%;
+}
+
+.presentacionTexto {
+	width: 40%;
+	text-align: left;
+	font-size: 14px;
+}
+
+#presentacion img {
+	width: 40%;
+}
+
+/* DISCOGRAFIA */
+
+#discografia {
+	height: auto;
+	flex-direction: column;
+	background-color: white;
+	background-image: url('../img/recursos/integrantesbkg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#discografia h2 {
+	color: black;
+}
+
+.discografiaContenido {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+	justify-self: center;
+	align-self: center;
+}
+
+.espaciadoBot {
+	margin-bottom: 500px;
+}
+
+.spaceBot {
+	margin-bottom: 100px;
+}
+
+.discografiaCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: black;
+	width: 350px;
+	padding: 20px 10px;
+	border-radius: 25px;
+}
+
+.discografiaCard li {
+	list-style: decimal;
+}
+
+.discografiaCard li:hover {
+	color: gold;
+}
+
+.discografiaCard li:nth-child(2n-1) {
+	background-color: rgb(58, 58, 58);
+}
+.discografiaCard li:nth-child(2n) {
+	background-color: rgb(106, 106, 106);
+}
+
+.discografiaCard img {
+	width: 150px;
+	height: 150px;
+}
+
+/* SHOWS */
+
+#shows {
+	background-color: black;
+	background-image: url('../img/recursos/vivobkg.png');
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	padding: 0 10%;
+}
+
+.showCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+}
+
+.showCard p {
+	margin: 5px 0px 10px;
+	font-size: 20px;
+	font-family: 'Caveat';
+}
+
+.showCard img {
+	width: 150px;
+}
+
+#shows strong {
+	color: gold;
+}
+
+/* HISTORIA */
+
+#historia {
+	color: black;
+	padding: 0 10%;
+	text-align: center;
+	background-image: url('../img/recursos/integrantesbkg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#historia > p {
+	font-family: 'Caveat';
+	font-size: 32px;
+}
+
+form > p:first-child {
+	font-family: 'Caveat';
+	font-size: 32px;
+	padding: 50px 0px;
+}
+
+form {
+	background-image: url('../img/recursos/vivobkg.png');
+	background-size: cover;
+	/* background-color: black; */
+	margin: 150px 0px 500px auto;
+	color: white;
+}
+
+.datos {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-left: 20px;
+}
+
+.motivos {
+	padding: 20px;
+}
+
+.recital {
+	padding: 40px;
+}
+
+form label {
+	padding: 10px;
+}
+form input {
+	padding: 10px;
+	width: 400px;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+}
+
+form textarea {
+	margin-top: 10px;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+}
+
+#lineaTiempo {
+	position: relative;
+	height: 60px;
+	margin-bottom: 100px;
+}
+
+#linea {
+	background-color: black;
+	height: 10px;
+	width: 100%;
+	position: absolute;
+	top: 25px;
+}
+
+.puntosTemporales {
+	position: absolute;
+	top: 15px;
+	width: 100%;
+}
+
+.puntoTemporal {
+	border-radius: 50%;
+	border: 5px solid black;
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	transition: all 500ms ease-out;
+}
+
+.puntoTemporal:hover {
+	background-color: gold;
+	cursor: pointer;
+}
+
+.historia-box {
+	width: 80%;
+	position: absolute;
+	top: 0;
+	/* visibility: hidden; */
+	margin-top: 100px;
+}
+
+.historia-box img {
+	width: 200px;
+	height: 200px;
+	padding: 40px;
+}
+.historia-box div {
+	width: 60%;
+}
+#contenedor-historia {
+	position: relative;
+	height: 300px;
+}
+
+#micro {
+	position: absolute;
+	top: 0;
+	right: 0;
+	visibility: visible;
+	width: 25%;
+	padding-top: 150px;
+	z-index: -10;
+}
+
+.historia-box {
+	visibility: hidden;
+	width: 75%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.box-temporal:hover .historia-box {
+	visibility: visible;
+}
+
+/* ANECDOTAS */
+
+#anecdotas {
+	height: auto;
+	flex-direction: column;
+	background-color: white;
+	background-image: url('../img/recursos/integrantes2bkg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	color: black;
+	padding: 0 10%;
+}
+
+#anecdotas span {
+	text-align: right;
+}
+
+.videos-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.videos-box div {
+	width: 45%;
+}
+
+.anecdotasContenido {
+	margin-bottom: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.anecdotasCard {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	position: relative;
+	color: white;
+}
+
+.anecdotasCard h3 {
+	color: black;
+}
+
+.anecdotasCard img {
+	width: 100%;
+}
+
+.anecdotasCard p {
+	font-size: 14px;
+}
+
+.anecdotasCard p {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	align-items: center;
+}
+
+.anecdotasCard:hover p {
+	visibility: visible;
+}
+
+.anecdotasCard:hover img {
+	filter: brightness(30%);
+}
+
+/* footer */
+footer {
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+}
+
+#fotoPerfil {
+	height: 150px;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.logos img {
+	width: 50px;
+	margin-right: 10px;
+}
